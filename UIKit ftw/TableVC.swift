@@ -24,7 +24,7 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.backgroundColor = .systemBackground
         tableView.separatorColor = .systemRed
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         
         view.addSubview(tableView)
@@ -35,9 +35,9 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        cell.textLabel?.text = "This is row \(indexPath.row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        cell.titleLabel.text = "This is row \(indexPath.row)"
+        cell.badge.text = String(indexPath.row)
         return cell
     }
     

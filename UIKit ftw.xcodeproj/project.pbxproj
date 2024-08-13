@@ -13,6 +13,7 @@
 		F722AABF2C6B724F00A52244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F722AABE2C6B724F00A52244 /* Assets.xcassets */; };
 		F722AAC22C6B724F00A52244 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F722AAC12C6B724F00A52244 /* Base */; };
 		F722AACA2C6B75B800A52244 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722AAC92C6B75B800A52244 /* TableVC.swift */; };
+		F722AACE2C6BE3E900A52244 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722AACD2C6BE3E900A52244 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F722AAC12C6B724F00A52244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F722AAC32C6B724F00A52244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F722AAC92C6B75B800A52244 /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		F722AACD2C6BE3E900A52244 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F722AAC02C6B724F00A52244 /* LaunchScreen.storyboard */,
 				F722AAC32C6B724F00A52244 /* Info.plist */,
 				F722AAC92C6B75B800A52244 /* TableVC.swift */,
+				F722AACD2C6BE3E900A52244 /* TableViewCell.swift */,
 			);
 			path = "UIKit ftw";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F722AACE2C6BE3E900A52244 /* TableViewCell.swift in Sources */,
 				F722AABA2C6B724D00A52244 /* ViewController.swift in Sources */,
 				F722AACA2C6B75B800A52244 /* TableVC.swift in Sources */,
 				F722AAB62C6B724D00A52244 /* AppDelegate.swift in Sources */,
