@@ -41,8 +41,9 @@ class TabBarController: UITabBarController {
     }
     
     @objc private func nothing() {
-        print("ich tu nix 🐶")
-        print(UserDefaults.standard.bool(forKey: "has-seen-onboarding"))
+        let alert = UIAlertController(title: "ich tu nix 🐶", message: "has seen onboarding: \(UserDefaults.standard.bool(forKey: "has-seen-onboarding"))", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok, danke", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

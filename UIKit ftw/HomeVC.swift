@@ -13,6 +13,12 @@ class HomeVC: UIViewController {
         view.backgroundColor = .systemBackground
         UserDefaults.standard.set(true, forKey: "has-seen-onboarding")
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        UserDefaults.standard.set(false, forKey: "has-seen-onboarding")
+
+    }
 }
 
 #Preview {
