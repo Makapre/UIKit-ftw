@@ -40,7 +40,10 @@ class TabBarController: UITabBarController {
         return item
     }
     
-    @objc private func nothing() { print("ich tu nix 🐶") }
+    @objc private func nothing() {
+        print("ich tu nix 🐶")
+        print(UserDefaults.standard.bool(forKey: "has-seen-onboarding"))
+    }
 }
 
 #Preview {

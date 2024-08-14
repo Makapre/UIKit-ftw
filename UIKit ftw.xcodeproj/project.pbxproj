@@ -15,6 +15,7 @@
 		F722AACA2C6B75B800A52244 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722AAC92C6B75B800A52244 /* TableVC.swift */; };
 		F722AACE2C6BE3E900A52244 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722AACD2C6BE3E900A52244 /* TableViewCell.swift */; };
 		F793964D2C6CD7DF005241DF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F793964C2C6CD7DF005241DF /* TabBarController.swift */; };
+		F793964F2C6CE366005241DF /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F793964E2C6CE366005241DF /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F722AAC92C6B75B800A52244 /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
 		F722AACD2C6BE3E900A52244 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F793964C2C6CD7DF005241DF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F793964E2C6CE366005241DF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		F722AAB42C6B724D00A52244 /* UIKit ftw */ = {
 			isa = PBXGroup;
 			children = (
+				F793964E2C6CE366005241DF /* PrivacyInfo.xcprivacy */,
 				F793964C2C6CD7DF005241DF /* TabBarController.swift */,
 				F722AAB52C6B724D00A52244 /* AppDelegate.swift */,
 				F722AAB72C6B724D00A52244 /* SceneDelegate.swift */,
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F793964F2C6CE366005241DF /* PrivacyInfo.xcprivacy in Resources */,
 				F722AABF2C6B724F00A52244 /* Assets.xcassets in Resources */,
 				F722AAC22C6B724F00A52244 /* Base in Resources */,
 			);
