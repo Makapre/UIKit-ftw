@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F70FE7E92C6D3823007E6442 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FE7E82C6D3823007E6442 /* SettingsVC.swift */; };
 		F722AAB62C6B724D00A52244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722AAB52C6B724D00A52244 /* AppDelegate.swift */; };
 		F722AAB82C6B724D00A52244 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722AAB72C6B724D00A52244 /* SceneDelegate.swift */; };
 		F722AABA2C6B724D00A52244 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722AAB92C6B724D00A52244 /* HomeVC.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F70FE7E82C6D3823007E6442 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		F722AAB22C6B724D00A52244 /* UIKit ftw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit ftw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F722AAB52C6B724D00A52244 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F722AAB72C6B724D00A52244 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				F722AAC32C6B724F00A52244 /* Info.plist */,
 				F722AAC92C6B75B800A52244 /* TableVC.swift */,
 				F722AACD2C6BE3E900A52244 /* TableViewCell.swift */,
+				F70FE7E82C6D3823007E6442 /* SettingsVC.swift */,
 			);
 			path = "UIKit ftw";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				F722AABA2C6B724D00A52244 /* HomeVC.swift in Sources */,
 				F722AACA2C6B75B800A52244 /* TableVC.swift in Sources */,
 				F793964D2C6CD7DF005241DF /* TabBarController.swift in Sources */,
+				F70FE7E92C6D3823007E6442 /* SettingsVC.swift in Sources */,
 				F722AAB62C6B724D00A52244 /* AppDelegate.swift in Sources */,
 				F722AAB82C6B724D00A52244 /* SceneDelegate.swift in Sources */,
 			);
