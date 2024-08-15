@@ -26,8 +26,9 @@ class TabBarController: UITabBarController {
         let home = createTabbarItem(with: "Home", and: UIImage(systemName: "house"), vc: HomeVC())
         let table = createTabbarItem(with: "Table", and: UIImage(systemName: "tablecells"), vc: TableVC())
         let settings = createTabbarItem(with: "Settings", and: UIImage(systemName: "gear"), vc: SettingsVC())
-        
-        self.setViewControllers([table, home, settings], animated: true)
+        let pages = createTabbarItem(with: "Pages", and: UIImage(systemName: "book.pages"), vc: PageVC())
+
+        self.setViewControllers([table, home, pages, settings], animated: true)
     }
     
     private func createTabbarItem(with title: String, and image: UIImage?, vc: UIViewController) -> UINavigationController {
