@@ -11,7 +11,7 @@ class TableViewCell: UITableViewCell {
         
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 3
+        label.numberOfLines = 1
         label.textAlignment = .natural
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -46,7 +46,7 @@ class TableViewCell: UITableViewCell {
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -50),
             titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            badge.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8),
+            badge.leadingAnchor.constraint(lessThanOrEqualTo: titleLabel.trailingAnchor, constant: 12),
             badge.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             badge.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])

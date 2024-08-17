@@ -16,19 +16,34 @@ class TabBarController: UITabBarController {
     }
     
     private func setupTabbar() {
-        self.tabBar.unselectedItemTintColor = .systemMint.withAlphaComponent(0.3)
-        self.tabBar.tintColor = .systemRed
-        self.tabBar.backgroundColor = .systemRed.withAlphaComponent(0.5)
-        self.tabBar.isTranslucent = false
+        let appearance: UITabBarAppearance = UITabBarAppearance()
+        
+        // tabbar
+        appearance.configureWithDefaultBackground()
+        appearance.backgroundColor = .orange
+        
+        // items - selected
+        appearance.stackedLayoutAppearance.selected.iconColor = .blue
+        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.blue]
+        appearance.stackedLayoutAppearance.selected.titlePositionAdjustment = .init(horizontal: 0, vertical: 6)
+        
+        // items - normal
+        appearance.stackedLayoutAppearance.normal.iconColor = .red
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.orange]
+        
+
+        self.tabBar.standardAppearance = appearance
+        self.tabBar.scrollEdgeAppearance = appearance
     }
     
     private func setupTabs() {
         let home = createTabbarItem(with: "Home", and: UIImage(systemName: "house"), vc: HomeVC())
         let table = createTabbarItem(with: "Table", and: UIImage(systemName: "tablecells"), vc: TableVC())
         let settings = createTabbarItem(with: "Settings", and: UIImage(systemName: "gear"), vc: SettingsVC())
-        let pages = createTabbarItem(with: "Pages", and: UIImage(systemName: "book.pages"), vc: PageVC())
+        let pagesPageCurl = createTabbarItem(with: "Curl", and: UIImage(systemName: "book.pages"), vc: PageVC(transitionStyle: .pageCurl, navigationOrientation: .horizontal))
+        let pagesScroll = createTabbarItem(with: "Scroll", and: UIImage(systemName: "book.pages.fill"), vc: PageVC(transitionStyle: .scroll, navigationOrientation: .vertical))
 
-        self.setViewControllers([table, home, pages, settings], animated: true)
+        self.setViewControllers([table, home, pagesPageCurl, pagesScroll, settings], animated: true)
     }
     
     private func createTabbarItem(with title: String, and image: UIImage?, vc: UIViewController) -> UINavigationController {
@@ -45,6 +60,7 @@ class TabBarController: UITabBarController {
         
         if !(firstVC is SettingsVC) {
             firstVC?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Tut nix", style: .plain, target: nil, action: #selector(nothing))
+            firstVC?.navigationItem.rightBarButtonItem?.tintColor = .label
         }
         
         return item

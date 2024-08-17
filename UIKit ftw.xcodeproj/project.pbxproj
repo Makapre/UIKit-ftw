@@ -15,6 +15,7 @@
 		F722AAC22C6B724F00A52244 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F722AAC12C6B724F00A52244 /* Base */; };
 		F722AACA2C6B75B800A52244 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722AAC92C6B75B800A52244 /* TableVC.swift */; };
 		F722AACE2C6BE3E900A52244 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F722AACD2C6BE3E900A52244 /* TableViewCell.swift */; };
+		F74AFDCE2C70D35100BC9756 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74AFDCD2C70D35100BC9756 /* PreviewVC.swift */; };
 		F793964D2C6CD7DF005241DF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F793964C2C6CD7DF005241DF /* TabBarController.swift */; };
 		F793964F2C6CE366005241DF /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F793964E2C6CE366005241DF /* PrivacyInfo.xcprivacy */; };
 		F7B790F82C6E04DA00577852 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B790F72C6E04DA00577852 /* PageVC.swift */; };
@@ -34,6 +35,7 @@
 		F722AAC32C6B724F00A52244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F722AAC92C6B75B800A52244 /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
 		F722AACD2C6BE3E900A52244 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		F74AFDCD2C70D35100BC9756 /* PreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
 		F793964C2C6CD7DF005241DF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F793964E2C6CE366005241DF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		F7B790F72C6E04DA00577852 /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		F722AAB42C6B724D00A52244 /* UIKit ftw */ = {
 			isa = PBXGroup;
 			children = (
+				F74AFDCC2C70D33600BC9756 /* Table */,
 				F7B790F62C6E04A500577852 /* PageVC */,
 				F793964E2C6CE366005241DF /* PrivacyInfo.xcprivacy */,
 				F793964C2C6CD7DF005241DF /* TabBarController.swift */,
@@ -81,11 +84,19 @@
 				F722AABE2C6B724F00A52244 /* Assets.xcassets */,
 				F722AAC02C6B724F00A52244 /* LaunchScreen.storyboard */,
 				F722AAC32C6B724F00A52244 /* Info.plist */,
-				F722AAC92C6B75B800A52244 /* TableVC.swift */,
-				F722AACD2C6BE3E900A52244 /* TableViewCell.swift */,
 				F70FE7E82C6D3823007E6442 /* SettingsVC.swift */,
 			);
 			path = "UIKit ftw";
+			sourceTree = "<group>";
+		};
+		F74AFDCC2C70D33600BC9756 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				F722AAC92C6B75B800A52244 /* TableVC.swift */,
+				F722AACD2C6BE3E900A52244 /* TableViewCell.swift */,
+				F74AFDCD2C70D35100BC9756 /* PreviewVC.swift */,
+			);
+			path = Table;
 			sourceTree = "<group>";
 		};
 		F7B790F62C6E04A500577852 /* PageVC */ = {
@@ -171,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F722AACE2C6BE3E900A52244 /* TableViewCell.swift in Sources */,
+				F74AFDCE2C70D35100BC9756 /* PreviewVC.swift in Sources */,
 				F722AABA2C6B724D00A52244 /* HomeVC.swift in Sources */,
 				F722AACA2C6B75B800A52244 /* TableVC.swift in Sources */,
 				F793964D2C6CD7DF005241DF /* TabBarController.swift in Sources */,
