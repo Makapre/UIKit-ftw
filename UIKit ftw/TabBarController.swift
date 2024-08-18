@@ -39,11 +39,11 @@ class TabBarController: UITabBarController {
     private func setupTabs() {
         let home = createTabbarItem(with: "Home", and: UIImage(systemName: "house"), vc: HomeVC())
         let table = createTabbarItem(with: "Table", and: UIImage(systemName: "tablecells"), vc: TableVC())
-        let settings = createTabbarItem(with: "Settings", and: UIImage(systemName: "gear"), vc: SettingsVC())
+//        let settings = createTabbarItem(with: "Settings", and: UIImage(systemName: "gear"), vc: SettingsVC())
         let pagesPageCurl = createTabbarItem(with: "Curl", and: UIImage(systemName: "book.pages"), vc: PageVC(transitionStyle: .pageCurl, navigationOrientation: .horizontal))
         let pagesScroll = createTabbarItem(with: "Scroll", and: UIImage(systemName: "book.pages.fill"), vc: PageVC(transitionStyle: .scroll, navigationOrientation: .vertical))
 
-        self.setViewControllers([table, home, pagesPageCurl, pagesScroll, settings], animated: true)
+        self.setViewControllers([table, home, pagesPageCurl, pagesScroll], animated: true)
     }
     
     private func createTabbarItem(with title: String, and image: UIImage?, vc: UIViewController) -> UINavigationController {
@@ -58,10 +58,14 @@ class TabBarController: UITabBarController {
             title + " controller"
         }
         
+        var buttons = [UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: nil, action: #selector(showSettings))]
+        
         if !(firstVC is SettingsVC) {
-            firstVC?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Tut nix", style: .plain, target: nil, action: #selector(nothing))
-            firstVC?.navigationItem.rightBarButtonItem?.tintColor = .label
+            buttons.append(UIBarButtonItem(title: "Tut nix", style: .plain, target: nil, action: #selector(nothing)))
         }
+        
+        firstVC?.navigationItem.rightBarButtonItem?.tintColor = .label
+        firstVC?.navigationItem.rightBarButtonItems = buttons
         
         return item
     }
@@ -72,6 +76,19 @@ class TabBarController: UITabBarController {
         let alert = UIAlertController(title: "ich tu nix 🐶", message: "has seen onboarding: \(!hasSeenOnboarding)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ok, danke", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc private func showSettings() {
+        let vc = SettingsVC()
+        if let sheet = vc.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+            sheet.preferredCornerRadius = 25
+            sheet.prefersGrabberVisible = true
+        }
+        let transitions: [UIModalTransitionStyle] = [.flipHorizontal, .coverVertical, .crossDissolve]
+        vc.modalTransitionStyle = transitions.randomElement() ?? .coverVertical
+        vc.modalPresentationStyle = .formSheet
+        present(vc, animated: true, completion: nil)
     }
 }
 

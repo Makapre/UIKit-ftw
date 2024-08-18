@@ -74,6 +74,13 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = PreviewVC()
+        let index = indexPath.row
+        vc.index = index
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
