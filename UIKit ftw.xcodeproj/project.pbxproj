@@ -81,10 +81,10 @@
 				F722AAB52C6B724D00A52244 /* AppDelegate.swift */,
 				F722AAB72C6B724D00A52244 /* SceneDelegate.swift */,
 				F722AAB92C6B724D00A52244 /* HomeVC.swift */,
+				F70FE7E82C6D3823007E6442 /* SettingsVC.swift */,
 				F722AABE2C6B724F00A52244 /* Assets.xcassets */,
 				F722AAC02C6B724F00A52244 /* LaunchScreen.storyboard */,
 				F722AAC32C6B724F00A52244 /* Info.plist */,
-				F70FE7E82C6D3823007E6442 /* SettingsVC.swift */,
 			);
 			path = "UIKit ftw";
 			sourceTree = "<group>";
