@@ -31,9 +31,14 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //            tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: tabBarController.tabBar.frame.height, right: 0.0);
 //        }
 
-        tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+//        tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         
         view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,7 +75,27 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 image: UIImage(systemName: "trash"),
                 attributes: .destructive
             ) { _ in }
-            return UIMenu(title: "This is a context menu", children: [inspectAction, deleteAction])
+            let deleteAction2 = UIAction(
+                title: NSLocalizedString("DeleteTitle", comment: ""),
+                image: UIImage(systemName: "trash"),
+                attributes: .destructive
+            ) { _ in }
+            let deleteAction3 = UIAction(
+                title: NSLocalizedString("DeleteTitle", comment: ""),
+                image: UIImage(systemName: "trash"),
+                attributes: .destructive
+            ) { _ in }
+            let deleteAction4 = UIAction(
+                title: NSLocalizedString("DeleteTitle", comment: ""),
+                image: UIImage(systemName: "trash"),
+                attributes: .destructive
+            ) { _ in }
+            let deleteAction5 = UIAction(
+                title: NSLocalizedString("DeleteTitle", comment: ""),
+                image: UIImage(systemName: "trash"),
+                attributes: .destructive
+            ) { _ in }
+            return UIMenu(title: "This is a context menu", children: [inspectAction, deleteAction, deleteAction2, deleteAction3, deleteAction4, deleteAction5])
         }
     }
     
